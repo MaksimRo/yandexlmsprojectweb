@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoUpHill</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+<div class="sidebar" id="menu">
+    <div class="close-btn" onclick="toggleMenu()">✕</div>
+    <p>Главная</p>
+    <p>Афиша</p>
+    <p>Рейтинг</p>
+</div>
+
+<div class="wrapper">
+
+<div class="topbar">
+    <div class="burger" onclick="toggleMenu()">☰</div>
+
+    <div class="logo">
+        <img src="static/img/iconlogo.png">
+        GoUpHill
+    </div>
+
+    <div class="auth">
+        {% if user %}
+            <span class="me-2 text-black">Привет, {{ user }}!</span>
+            <a href="/logout" class="btn btn-light btn-sm">Выйти</a>
+        {% else %}
+            <a href="/login" class="btn btn-light btn-sm">Войти</a>
+            <a href="/register" class="btn btn-light btn-sm">Регистрация</a>
+        {% endif %}
+    </div>
+</div>
+
+<div class="banner">
+    <img src="static/img/Rectangle 44.png">
+    <div class="banner-text">
+        «Я не собираюсь побеждать горы – они такая же часть мира, как и люди.
+        Я побеждаю себя.»
+        <br><br>
+        — Ванда Руткевич
+    </div>
+</div>
+
+<div class="section-title">Самое интересное сегодня:</div>
+
+<div class="container">
+    <div class="row g-3">
+
+        <div class="col-md-4">
+            <a href="/affiche?id=1" class="event-btn text-decoration-none d-block">
+                <div class="card card-custom">
+                    <img src="static/img/Rectangle 40.jpg">
+                    <div class="p-2 d-flex justify-content-between">
+                        <span>Мероприятие</span>
+                        <span>10 б</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="/affiche?id=2" class="event-btn text-decoration-none d-block">
+                <div class="card card-custom">
+                    <img src="static/img/Rectangle 40.jpg">
+                    <div class="p-2 d-flex justify-content-between">
+                        <span>Мероприятие 2</span>
+                        <span>20 б</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="/affiche?id=3" class="event-btn text-decoration-none d-block">
+                <div class="card card-custom">
+                    <img src="static/img/Rectangle 40.jpg">
+                    <div class="p-2 d-flex justify-content-between">
+                        <span>Мероприятие 3</span>
+                        <span>15 б</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="section-title">Рейтинг недели:</div>
+
+<div class="container">
+    <div class="row g-4">
+
+        <div class="col-md-5">
+            <div class="rating-box text-center">
+
+                <div class="avatar"></div>
+                <h5>1. Мария Миронова</h5>
+                <div class="points">780 б</div>
+
+                <div class="rating-item">2. Михаил <span>750</span></div>
+                <div class="rating-item">3. Давид <span>730</span></div>
+                <div class="rating-item">4. Галина <span>730</span></div>
+                <div class="rating-item">5. Арина <span>710</span></div>
+
+                <div class="rating-item user mt-3">
+                    Вы <span>0</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="rating-box text-center">
+
+                <h4>У вас баллов:</h4>
+                <div class="points-big">0</div>
+
+                <div class="gray-box"></div>
+
+                <button class="btn btn-green mt-3 px-4">
+                    Как набрать баллы?
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

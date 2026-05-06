@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: url('/static/img/backweb.jpg') center/cover no-repeat fixed;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative;
+}
+.event-btn {
+    border: none;
+    background: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.event-btn:hover {
+    transform: scale(1.02);
+    transition: 0.2s;
+}
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 30px;
+}
+
+.auth button {
+    border: none;
+    background: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-left: 10px;
+}
+
+.burger {
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.banner {
+    margin: 20px;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-text {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 350px;
+    background: rgba(255,255,255,0.75);
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.section-title {
+    margin: 20px;
+    background: #e5e5e5;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.card-custom {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card-custom img {
+    height: 150px;
+    object-fit: cover;
+}
+
+.btn-green {
+    background: #6aa84f;
+    color: white;
+    border-radius: 20px;
+}
+
+.rating-box {
+    background: #eee;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.points {
+    background: #6aa84f;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.rating-item {
+    background: #ddd;
+    padding: 8px;
+    border-radius: 15px;
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user {
+    background: #6aa84f;
+    color: white;
+}
+
+.points-big {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.gray-box {
+    height: 180px;
+    background: #ddd;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background: #eee;
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}

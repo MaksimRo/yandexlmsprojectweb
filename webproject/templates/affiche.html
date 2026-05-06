@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Афиша</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    background: #eaeaea;
+}
+
+.card-box {
+    background: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.img-big {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.map {
+    border-radius: 20px;
+    border: none;
+}
+
+.points {
+    background: #ddd;
+    padding: 8px 20px;
+    border-radius: 20px;
+}
+
+.btn-green {
+    background: #6aa84f;
+    color: white;
+    border-radius: 20px;
+}
+</style>
+
+<title>Мероприятие</title>
+</head>
+
+<body>
+
+<div class="container mt-5">
+    <div class="card-box p-3">
+
+        <div class="row">
+
+            <div class="col-md-7">
+                <img id="img" class="img-big rounded-4">
+            </div>
+
+            <div class="col-md-5 position-relative p-4">
+
+                <a href="/" class="position-absolute top-0 end-0 m-3 fs-3 text-decoration-none text-dark">✕</a>
+
+                <h2 id="title"></h2>
+                <p id="type"></p>
+                <p id="desc"></p>
+
+                <iframe id="map" class="map w-100" height="220"></iframe>
+
+                <div class="d-flex justify-content-between mt-3">
+                    <div class="points">106</div>
+                    <button class="btn btn-green px-4">Я пойду</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
